@@ -27,7 +27,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@master
+      uses: actions/checkout@v1
 
     - name: Initialization environment
       env:
@@ -106,7 +106,7 @@ jobs:
         echo "::set-env name=FIRMWARE::$(pwd)"
 
     - name: Upload firmware
-      uses: actions/upload-artifact@master
+      uses: actions/upload-artifact@v1
       if: always()
       with:
         name: OpenWrt_firmware
